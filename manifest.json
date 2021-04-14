@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "name": "Clean Link (meet)",
+    "author": "Arthur Lobo",
+    "description": "Tira atributos de pesquisa para reuniões do google meet",
+    "content_scripts": [
+        {
+            "matches": ["https://meet.google.com/*"],
+            "js": ["main.js"]
+        }
+    ],
+    "icons": {
+        "32": "./assets/icon32.png",
+        "48": "./assets/icon48.png"
+    }
+}
