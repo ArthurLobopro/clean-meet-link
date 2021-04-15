@@ -1,4 +1,6 @@
 body{
     width: max-content;
     padding: 5px 10px;
+    background-color: white;
+    color: black;
 }
