@@ -15,6 +15,18 @@ chrome.storage.sync.get("user", data => {
 })
 user = user === undefined ? "0" : user
 
+let clean
+chrome.storage.sync.get("clean", data => {
+    console.log(data);
+    clean = data.clean
+})
+clean = clean === undefined ? false : clean
+console.log(clean)
+
 setTimeout(() => {
-    auth(user)
+    if(clean){
+        clear_link()
+    }else{
+        auth(user)
+    }
 }, 500)
