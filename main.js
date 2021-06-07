@@ -18,7 +18,7 @@ user = user === undefined ? "0" : user
 let clean
 chrome.storage.sync.get("clean", data => {
     console.log(data);
-    clean = data.clean
+    clean = data.clean === "true" ? true : false
 })
 clean = clean === undefined ? false : clean
 console.log(clean)

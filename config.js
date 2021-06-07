@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
         localStorage.clean = false
     }
     console.log(localStorage);
-    user = localStorage.user
-    clean = Boolean(localStorage.clean)
+    user = localStorage.user === "true" ? true : false
+    clean = localStorage.clean === "true" ? true : false
     att_storage_user(user)
 
     const users = document.getElementsByName("user")
