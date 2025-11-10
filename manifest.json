@@ -1,25 +1,22 @@
 {
-    "manifest_version": 2,
-    "version": "0.0.2",
-    "name": "Clean Link (meet)",
-    "author": "Arthur Lobo",
-    "description": "Tira atributos de pesquisa para reuniões do google meet",
-    "content_scripts": [
-        {
-            "matches": ["https://meet.google.com/*"],
-            "js": ["main.js"]
-        }
-    ],
-    "icons": {
-        "32": "./assets/icon32.png",
-        "48": "./assets/icon48.png"
-    },
-    "browser_action": {
-        "default_popup":"./popup.html"
-    },
-    "permissions": [
-        "unlimitedStorage",
-        "storage",
-        "activeTab"    
-    ]
+  "manifest_version": 3,
+  "version": "0.0.2",
+  "name": "Clean Link (meet)",
+  "author": "Arthur Lobo",
+  "description": "Tira atributos de pesquisa para reuniões do Google Meet",
+  "icons": {
+    "32": "./assets/icon32.png",
+    "48": "./assets/icon48.png"
+  },
+  "action": {
+    "default_popup": "./popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://meet.google.com/*"],
+      "js": ["main.js"]
+    }
+  ],
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["https://meet.google.com/*"]
 }
